@@ -1,4 +1,4 @@
-# multilayer-community-information-compression
+# Evaluation of multilayer community detection based on information compression
 This is the repository which evaluates the community detection algorithms used in the article Community Detection in Multi-Partite Multi-Relational Networks Based on Information Compression. The evaluation metric used is NMI.
 ## Usage
 
@@ -24,14 +24,14 @@ hetero_scala $ sbt assembly
 ... (scala magics)
 hetero_scala $ ls target/scala-2.10/hetcom.jar
 To run the algorithm using jar file:
-# Get a help doc by calling without arguments
+Get a help doc by calling without arguments
 $ java -jar /path/to/hetcom.jar
 usage:
   ...
   ...
 
 $ java -jar /path/to/hetcom.jar ...(arguments)
-# or
+ or
 $ java -cp /path/to/hetcom.jar {package}.{object} ...(arguments)
 To use it in REPL:
 hetero_scala $ sbt console
