@@ -5,11 +5,15 @@ This is the repository which evaluates the community detection algorithms used i
 ### How to run the evaluation code
 The networks for evaluation have been pre-generated. The ground truth as well as predicted communities are also pre-generated.
 Simply run the following python file to generate plots for different values of alpha, d, p and mu: 
-python3 compute_nmi.py 
+
+`python3 compute_nmi.py`
 
 If you want to run this on python2.7, you might have to make some modifications to this file.
 
-## Usage of community detection code. Copied from the this github repository - [https://github.com/weichuliu/hetero_scala] hetero_scala
+To run on custom networks, update the paths to ground truth communities and predicted communities in the compute_nmi.py file
+
+## Usage of community detection code. 
+Copied from the this github repository - [hetero_scala](https://github.com/weichuliu/hetero_scala)
 This is a scala project. It is built with sbt.
 
 Suppose you have java and sbt on your system.
@@ -31,62 +35,5 @@ $ java -jar /path/to/hetcom.jar ...(arguments)
 $ java -cp /path/to/hetcom.jar {package}.{object} ...(arguments)
 To use it in REPL:
 hetero_scala $ sbt console
-# when memory is not enough
-hetero_scala $ sbt -mem 4096 console
-Notes
 
-In sbt REPL (sbt console), most packages have FastUnfolding/Fast* algorithm to detect community from uni/k/hetero networks. Check unit tests.
-Composite modularity was named combiner because it was called combined modularity.
-Info compression method is also called hetero-finder, for that the k-partite ver (proposed by Xin Liu) was called BiNetFinder/TriNetFinder
-There was a python version first. But it is in the deep deep dark.
-If you don't know scala:
-Programming in Scala (2nd!!!!!) by Martin Odersky is THE book for scala. A MUST READ.
-Twitter's Effective Scala worths a read.
-This SO post is convenience.
-Files
-
-This is the description of files
-
-.
-├── README.md                     # this
-├── assembly.sbt                  # assembly settings
-├── build.sbt
-├── nets                          # all (uni|bi|tri)-partite / heterogeneous sample networks for test.
-│   ├── bi-sw.net
-│   ├── bi.net
-│   ├── hetero.net
-│   ├── tri.net
-│   ├── truth
-│   ├── uni-karate.net
-│   ├── uni-large.net
-│   └── uni.net
-├── project                       # settings for assembly (sbt plugin to compile scala into a .jar)
-│   └── assembly.sbt
-├── schedule                      # A simple TODO list, where a young and naïve me lives
-└── src
-    ├── main
-    │   └── scala
-    │       ├── combiner.scala    # implementation of composite modularity
-    │       ├── common.scala      # common functions
-    │       ├── counter.scala     # a Python collections.Counter like counter for counting objects
-    │       ├── hetcom.scala      # main
-    │       ├── hfcommon.scala    # common functions used in info-comp
-    │       ├── hfinder2.scala    # implementation of info compression
-    │       ├── kfinder.scala     # implementation of Xin Liu's KNetFinder
-    │       ├── merger.scala      # Louvain-C method in the thesis. Community detection on each subgraph -> Consensus Clustering -> Community detection again.
-    │       ├── muratabi.scala    # implementation of murata's bipartite modularity
-    │       ├── muratatri.scala   # implementation of murata's tripartite modularity
-    │       ├── newman.scala      # implementation of newman's modularity
-    │       ├── oldhfinder.scala  # myth...
-    │       └── ufinder.scala     # implementation of rosvall's paper
-    └── test                      # Unit tests
-        └── scala
-            ├── combinertest.scala
-            ├── commontest.scala
-            ├── countertest.scala
-            ├── findertest.scala
-            ├── muratabitest.scala
-            ├── muratatritest.scala
-            └── newmantest.scala
-
-
+For more detail, visit the [original repository](https://github.com/weichuliu/hetero_scala)
