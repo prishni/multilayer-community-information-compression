@@ -1,8 +1,0 @@
-[0m[[0minfo[0m] [0m[32mcommonSuite:[0m[0m
-[0m[[0minfo[0m] [0m[32m- readnet and writenet test[0m[0m
-[0m[[0minfo[0m] [0m[32m- rangeToPair and belongJudger[0m[0m
-[0m[[0minfo[0m] [0m[32m- gennodeseq layer and localnid test[0m[0m
-[0m[[0minfo[0m] [0m[32m- gennodeseq bypass test[0m[0m
-[0m[[0minfo[0m] [0m[32m- lrnr[0m[0m
-[0m[[0minfo[0m] [0m[32m- subGraphTypeFinder[0m[0m
-[0m[[0minfo[0m] [0m[32m- retr_c test[0m[0m
