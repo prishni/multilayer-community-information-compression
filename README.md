@@ -17,7 +17,7 @@ Copied from the this github repository - [hetero_scala](https://github.com/weich
 This is a scala project. It is built with sbt.
 
 Suppose you have java and sbt on your system.
-
+```
 To compile project into a single jar file:
 $ cd /path/to/hetero_scala
 hetero_scala $ sbt assembly
@@ -35,5 +35,5 @@ $ java -jar /path/to/hetcom.jar ...(arguments)
 $ java -cp /path/to/hetcom.jar {package}.{object} ...(arguments)
 To use it in REPL:
 hetero_scala $ sbt console
-
+```
 For more detail, visit the [original repository](https://github.com/weichuliu/hetero_scala)
